@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  pinger:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pinger_container
+    restart: always
+    environment:
+      VURL: "https://google.com"
+      VNAME: "GOOGLE"
+      VTIME: "60"
+    volumes:
+      - ./script.sh:/usr/local/bin/script.sh
