@@ -5,6 +5,14 @@ A simple application for sending a query to a web application at intervals
 
 https://hub.docker.com/r/sosnus15/pinger
 
+## how to run it?
+
+### how to run using docker bash?
+see `run.sh` file from this repository
+
+### how to run it using docker-compose file?
+see `docker-compose.yaml` file from this repository
+
 ## how to pull and run it?
 ```bash
 sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL=google.com --name pinger_container sosnus15/pinger
