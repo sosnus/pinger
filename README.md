@@ -17,6 +17,10 @@ see `docker-compose.yaml` file from this repository
 ```bash
 sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL=google.com --name pinger_container sosnus15/pinger
 ```
+if You have problem, use `'`, for example:
+```bash
+sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL='https://www.google.com/' --name pinger_container sosnus15/pinger
+```
 
 ## parameters
 * `VTIME` - delay in seconds, for example `5`
