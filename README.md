@@ -26,3 +26,8 @@ sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL='https://www.google.
 * `VTIME` - delay in seconds, for example `5`
 * `VNAME` - name of this service (used in logs) for example `GOOGLE.COM`
 * `VURL` - ping url, for example `google.com` or `http://google.com`
+
+
+## TODO
+* try again if problem with curl
+* what with error "curl: (6) Could not resolve host: mws02-50458.wykr.es"
