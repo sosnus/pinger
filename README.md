@@ -24,7 +24,7 @@ sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL='https://www.google.
 
 if You want run container in background, and use permanently with system autostart, use:
 ```bash
-sudo docker run --rm -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.google.com/' -e VURL=google.com --name pinger_container sosnus15/pinger
+sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.google.com/' -e VURL=google.com --name pinger_container sosnus15/pinger
 ```
 
 ## parameters
