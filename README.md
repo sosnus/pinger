@@ -22,6 +22,11 @@ if You have problem, use `'`, for example:
 sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL='https://www.google.com/' --name pinger_container sosnus15/pinger
 ```
 
+if You want run container in background, and use permanently with system autostart, use:
+```bash
+sudo docker run --rm -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.google.com/' -e VURL=google.com --name pinger_container sosnus15/pinger
+```
+
 ## parameters
 * `VTIME` - delay in seconds, for example `5`
 * `VNAME` - name of this service (used in logs) for example `GOOGLE.COM`
