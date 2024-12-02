@@ -35,4 +35,4 @@ sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.goog
 
 ## TODO
 * try again if problem with curl
-* what with error "curl: (6) Could not resolve host: mws02-50458.wykr.es"
+* switch to alpine or sth
