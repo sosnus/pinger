@@ -36,3 +36,4 @@ sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.goog
 ## TODO
 * try again if problem with curl
 * switch to alpine or sth
+* build on different architectures
