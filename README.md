@@ -1,9 +1,12 @@
 # pinger
-`docker pull sosnus15/pinger`
+`docker pull sosnus/pinger`
 
 A simple application for sending a query to a web application at intervals
 
-https://hub.docker.com/r/sosnus15/pinger
+https://hub.docker.com/r/sosnus/pinger
+
+> [!IMPORTANT]
+> Repo and image was moved from ~~sosnus15/pinger~~ to sosnus/pinger
 
 ## how to run it?
 
@@ -15,16 +18,16 @@ see `docker-compose.yaml` file from this repository
 
 ## how to pull and run it?
 ```bash
-sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL=google.com --name pinger_container sosnus15/pinger
+sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL=google.com --name pinger_container sosnus/pinger
 ```
 if You have problem, use `'`, for example:
 ```bash
-sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL='https://www.google.com/' --name pinger_container sosnus15/pinger
+sudo docker run --rm -e VTIME=5 -e VNAME=GOOGLE.COM -e VURL='https://www.google.com/' --name pinger_container sosnus/pinger
 ```
 
 if You want run container in background, and use permanently with system autostart, use:
 ```bash
-sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.google.com/' -e VURL=google.com --name pinger_container sosnus15/pinger
+sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.google.com/' -e VURL=google.com --name pinger_container sosnus/pinger
 ```
 
 ## parameters
