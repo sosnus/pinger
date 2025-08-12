@@ -8,6 +8,10 @@ echo "START!"
 while true; do
     echo -n "[$(date +'%Y-%m-%d %H:%M:%S')]  "
     echo -n "send ping {$VNAME} response: "
+    # if! curl -s -S -o - "$VURL"; then
+    #     echo "First attempt failed, retrying..."
+    #     curl -s -S -o - "$VURL"
+    # fi
     curl -s -S -o - $VURL
     sleep $VTIME
     echo " "
