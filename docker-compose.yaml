@@ -2,9 +2,10 @@ version: '3.8'
 
 services:
   pinger:
-    image: sosnus15/pinger
+    build: .
+    # image: sosnus/pinger
     container_name: pinger_container
-    restart: always
+    restart: unless-stopped
     environment:
       VURL: "https://google.com"
       VNAME: "GOOGLE"
