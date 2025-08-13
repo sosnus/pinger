@@ -20,6 +20,6 @@ while true; do
 
     # curl -s -S -o - $VURL
     sleep $VTIME
-    echo " "
+    # echo " "
 done
 # more info: https://tinyurl.com/yssmj7yp
