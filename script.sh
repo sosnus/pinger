@@ -15,6 +15,7 @@ while true; do
         echo $response
     else
         echo "Unexpected response: $response, try once again..."
+        echo -n "send AGAIN ping {$VNAME} response: "
         curl --max-time 40 -s -S -o - $VURL
     fi
     sleep $VTIME
