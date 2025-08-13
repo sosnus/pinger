@@ -8,11 +8,17 @@ echo "START!"
 while true; do
     echo -n "[$(date +'%Y-%m-%d %H:%M:%S')]  "
     echo -n "send ping {$VNAME} response: "
-    # if! curl -s -S -o - "$VURL"; then
-    #     echo "First attempt failed, retrying..."
-    #     curl -s -S -o - "$VURL"
-    # fi
-    curl -s -S -o - $VURL
+
+    response=$(curl -s -S -o - $VURL)
+    # Check if response matches expected JSON
+    if [ "$response" = '{"ok":true}' ]; then
+        echo $response
+    else
+        echo "Unexpected response: $response, try once again..."
+        curl -s -S -o - $VURL
+    fi
+
+    # curl -s -S -o - $VURL
     sleep $VTIME
     echo " "
 done
