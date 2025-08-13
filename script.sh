@@ -9,13 +9,13 @@ while true; do
     echo -n "[$(date +'%Y-%m-%d %H:%M:%S')]  "
     echo -n "send ping {$VNAME} response: "
 
-    response=$(curl -s -S -o - $VURL)
+    response=$(curl --max-time 40 -s -S -o - $VURL)
     # Check if response matches expected JSON
     if [ "$response" = '{"ok":true}' ]; then
         echo $response
     else
         echo "Unexpected response: $response, try once again..."
-        curl -s -S -o - $VURL
+        curl --max-time 40 -s -S -o - $VURL
     fi
     sleep $VTIME
     # echo " "

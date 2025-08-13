@@ -39,6 +39,7 @@ sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.goog
 ## DONE
 * 1 time retry ping (if!)
 * build on different architectures
+* add timeout 40s
 
 ## TODO
 * try again if problem with curl
