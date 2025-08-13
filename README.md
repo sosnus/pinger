@@ -36,10 +36,13 @@ sudo docker run -d --restart unless-stopped -e VTIME=5 -e VURL='https://www.goog
 * `VURL` - ping url, for example `google.com` or `http://google.com`
 
 
-## TODO
+## DONE
 * 1 time retry ping (if!)
+* build on different architectures
+
+## TODO
 * try again if problem with curl
 * switch to alpine or sth
-* build on different architectures
 * rewrite to busybox?
 * curl to wget?
+* add default params
