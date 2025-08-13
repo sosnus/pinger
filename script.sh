@@ -17,8 +17,6 @@ while true; do
         echo "Unexpected response: $response, try once again..."
         curl -s -S -o - $VURL
     fi
-
-    # curl -s -S -o - $VURL
     sleep $VTIME
     # echo " "
 done
